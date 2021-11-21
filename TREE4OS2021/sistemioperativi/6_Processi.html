@@ -1,0 +1,91 @@
+
+<HEAD> <TITLE>  PROCESSI </TITLE> </HEAD>
+<!--
+<BODY TEXT="#000000" BGCOLOR="#F9E1A4" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+<BODY TEXT="#000000" BGCOLOR="#F0B0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+-->
+
+
+<H3><I><B>6. Processi e POSIX API per utilizzo di Processi <BR>
+</B></I></H3>
+&nbsp;&nbsp; Riferimenti: Capitoli 3 "Processi" e 5 "Sincronizzazione di Processi"  del libro di testo. <BR>
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>LEZIONE su Processi padri e figli, Signalling IPC, Gestione della terminazione del Processo Figlio, Con Attesa o Asincrona </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "6_Processi_Introduzione.pdf">Introduzione ai Processi</A> &nbsp;&nbsp; (Appunti delle lezioni)
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "6c_IPC__Signals.pdf">6c_IPC__Signals.pdf</A> &nbsp;&nbsp; Signalling IPC e Gestione Terminazione Processi Figli (Appunti delle lezioni)
+<BR>
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Codice Duplicazione Processo e Attesa Terminazione del Processo Figlio </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PROCESSI/FORK/fork.c">fork.c</A> Codice duplicazione processo
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PROCESSI/FORK/MakefileFork">MakefileFork</A>
+Makefile per codice di duplicazione processo
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Codice Creazione Nuovo Processo mediante duplicazione e sostituzione immagine del processo</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PROCESSI/FORK/esegui.c">esegui.c</A> Codice creazione nuovo processo
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PROCESSI/FORK/script.sh">script.sh</A>
+script ausiliario
+<BR>
+
+<!-- VIC - DA RIPRISTINARE aa 21/22
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./PROCESSI/FORK/MakefileEsegui">MakefileEsegui</A>
+Makefile per codice di creazione processi
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Codice Gestione Asincrona (cio&egrave; SENZA ATTESA) della terminazione del Processo Figlio</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./PROCESSI/ZombiEOrfani/dezombizza_sighandler.c">dezombizza_sighandler.c</A> gestione SIGCHLD
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./PROCESSI/ZombiEOrfani/Makefile">Makefile</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./PTHREAD/NPROD_MCONS/printerror.h">printerror.h</A>
+<BR>
+-->
+
+<!--
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./PROCESSI/ZombiEOrfani/attendi_e_restituisci.sh">attendi_e_restituisci.sh</A> wait su piu pid
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./PROCESSI/ZombiEOrfani/testWaitCommand.sh">testWaitCommand.sh</A>
+<BR>
+-->
+<BR>
+
+
+
+</BODY>
+</HTML>
+

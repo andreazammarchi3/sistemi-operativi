@@ -1,0 +1,252 @@
+
+<HEAD> <TITLE>  PROBLEMI CLASSICI DI PROGRAMMAZIONE CONCORRENTE </TITLE> </HEAD>
+<!--
+<BODY TEXT="#000000" BGCOLOR="#F9E1A4" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+<BODY TEXT="#000000" BGCOLOR="#F0B0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+-->
+
+<H3><I><B>5. Problemi Classici di Programmazione Concorrente e Definizioni di concorrenza </B></I></H3>
+
+&nbsp;&nbsp; Argomenti: mutua esclusione, sincronizzazione, concorrenza, soluzioni classiche.
+<BR>
+
+&nbsp;&nbsp; Riferimenti: Capitolo "Sincronizzazione di Processi" del libro di testo.<BR>
+<BR>
+
+&nbsp;&nbsp; <B>LEZIONI su Problemi CLASSICI di Programmazione Concorrente tra pthread risolti con Mutexes e Condition Variables, Definizioni</B>
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; <A HREF = "5c_ProblClassici_ProgrammazioneConcorrenteInC_PosixThread.pdf"> 5c_ProblClassici_ProgrammazioneConcorrenteInC_PosixThread.pdf </A> (Appunti delle lezioni) <BR>
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LABORATORIO<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <A HREF = "5trisA_laboratorio_ProgrammazioneConcorrenteInC_ProbClassici.pdf">5trisA_laboratorio_ProgrammazioneConcorrenteInC_ProbClassici.pdf</A> (laboratorio, lezione 9 ) <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <A HREF = "5trisB_laboratorio_ProgrammazioneConcorrenteInC_ProbClassici.pdf">5trisB_laboratorio_ProgrammazioneConcorrenteInC_ProbClassici.pdf</A> (laboratorio, lezione 10 ) <BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "5quater_laboratorio_Lezione_9_ProgrammazioneConcorrenteInC_ProbClassici.pdf">5quater_laboratorio_ProgrammazioneConcorrenteInC_ProbClassici.pdf</A> (laboratorio, lezione 11 ) <BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LABORATORIO <A HREF = "ESERCIZI/ESERCIZI_CORREGGERE_ERRORI_2.tgz"> ESERCIZI_CORREGGERE_ERRORI_2.tgz </A> Archivio #2 programmi con errori da correggere<BR>
+<BR>
+
+&nbsp;&nbsp; <B>CODICE su Problemi CLASSICI di Programmazione Concorrente tra pthread risolti con Mutexes e Condition Variables</B>
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Codice per controllo d'errore, comune a tutte le soluzioni</B><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/SINCRO_CIRCOLARE_1a1/printerror.h">printerror.h</A>
+macro per stampa errori, usato in tutti gli esempi seguenti
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/SINCRO_CIRCOLARE_1a1/DBGpthread.h">DBGpthread.h</A>
+modulo con funzioni per controllo di errore, usato in tutti gli esempi seguenti
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/SINCRO_CIRCOLARE_1a1/DBGpthread.c">DBGpthread.c</A>
+prototipi delle funzioni per controllo di errore, usato in tutti gli esempi seguenti
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Sincronizzazione Circolare tra due pthread</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/SINCRO_CIRCOLARE_1a1/SBAGLIATO_0_circolare1a1.c">SBAGLIATO_0_circolare1a1.c</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/SINCRO_CIRCOLARE_1a1/SBAGLIATO_1_circolare1a1.c">SBAGLIATO_1_circolare1a1.c</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/SINCRO_CIRCOLARE_1a1/SBAGLIATO_2_circolare1a1.c">SBAGLIATO_2_circolare1a1.c</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/SINCRO_CIRCOLARE_1a1/circolare1a1.c">circolare1a1.c</A>
+CORRETTA Sincronizzazione circolare tra 2 pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/SINCRO_CIRCOLARE_1a1/Makefile">Makefile</A>
+Makefile per gli esempi di Sincronizzazione circolare tra 2 pthread
+<BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Algoritmo del Fornaio per code FIFO</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/ALGORITMO_FORNAIO_PER_CODA_FIFO/algoritmo_fornaio_per_coda_FIFO.c">algoritmo_fornaio_per_coda_FIFO.c</A>
+Codice algoritmo del fornaio per code FIFO
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/ALGORITMO_FORNAIO_PER_CODA_FIFO/algoritmo_fornaio_BUSY_WAITING_per_coda_FIFO.c">algoritmo_fornaio_BUSY_WAITING_per_coda_FIFO.c</A>
+implementazione ORRENDA POCO EFFICIENTE a causa di Busy Waiting
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/ALGORITMO_FORNAIO_PER_CODA_FIFO/Makefile">Makefile</A>
+Makefile per gli esempi di algoritmo del fornaio per code FIFO
+<BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Produttori e Consumatori con un buffer solo</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NPROD_MCONS/NProdMCons1buffer_NONefficiente.c">NProdMCons1buffer_NONefficiente.c</A>
+Codice Produttori e Consumatori con 1 solo buffer: Soluzione <B>NON efficiente</B>.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NPROD_MCONS/Makefile1buffer_NONefficiente">Makefile1buffer_NONefficiente</A>
+Makefile per Produttori e Consumatori con 1 solo buffer NON efficiente
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NPROD_MCONS/NProdMCons1buffer.c">NProdMCons1buffer.c</A>
+Codice Produttori e Consumatori con 1 solo buffer: <B>EFFICENTE</B>.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NPROD_MCONS/Makefile1buffer">Makefile1buffer</A>
+Makefile per Produttori e Consumatori con 1 solo buffer. Efficiente
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Produttori e Consumatori con K buffer</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NPROD_MCONS/NProdMConsKbuffer.c">NProdMConsKbuffer.c</A>
+Codice Produttori e Consumatori con K buffer: Soluzione efficiente.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "COMMON/FINITE_QUEUE/finiteTailQueue.c">finiteTailQueue.c</A>
+modulo per gestione liste a lunghezza finita FTQ
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "COMMON/FINITE_QUEUE/finiteTailQueue.h">finiteTailQueue.h</A>
+definizione strutture e prototipi delle funzioni per gestione liste a lunghezza finita FTQ
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "COMMON/FINITE_QUEUE/userdefinedBuffer.h">userdefinedBuffer.h</A>
+struttura dati personalizzata da mantenere in lista
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NPROD_MCONS/Makefile">Makefile</A>
+Makefile per Produttori e Consumatori con K buffer
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Lettori e Scrittori</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NLett_MScritt/NLettoriMScrittori.c">NLettoriMScrittori.c</A>
+Codice Readers & Writers 
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NLett_MScritt/Makefile">Makefile</A>
+Makefile per Lettori Scrittori
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>5 Filosofi a tavola</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/5FILOSOFI/5filosofi.c">5filosofi.c</A>
+Codice 5 filosofi
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/5FILOSOFI/Makefile">Makefile</A>
+Makefile per 5 Filosofi
+<BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Passaggio Sicuro di Testimone</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/PASSAGGIO_TESTIMONE/PassaggioSicuroDiTestimone.c">PassaggioSicuroDiTestimone.c</A>
+Codice Passaggio Sicuro di Testimone
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/PASSAGGIO_TESTIMONE/Makefile">Makefile</A>
+Makefile per Passaggio Sicuro di Testimone
+<BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Barbiere appisolato</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/BARBIERE/barbiere.c">barbiere.c</A>
+Codice Barbiere appisolato
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/BARBIERE/Makefile">Makefile</A>
+Makefile per Barbiere appisolato
+<BR>
+
+<!--  NON PIU USATO DA a.a. 20/21 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Barbiere appisolato che saluta (ma rischia di avere due clienti su poltrona)</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./PTHREAD/BARBIERE/barbiereconsalutoRischioduesupoltrona.c">barbiereconsalutoRischioduesupoltrona.c</A>
+Codice per Barbiere appisolato che saluta (ma rischia di avere due clienti su poltrona)
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./PTHREAD/BARBIERE/MakefileconsalutoRischioduesupoltrona">MakefileconsalutoRischioduesupoltrona</A>
+Makefile per Barbiere appisolato che saluta (ma rischia di avere due clienti su poltrona)
+<BR>
+-->
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>OK, Barbiere appisolato che saluta e viene salutato</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/BARBIERE/barbiereconsaluti.c">barbiereconsaluti.c</A>
+Codice Barbiere appisolato che saluta e viene salutato
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/BARBIERE/Makefileconsaluti">Makefileconsaluti</A>
+Makefile per Barbiere appisolato che saluta e viene salutato
+<BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Lettori e Scrittori ma favorire gli scrittori</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NLett_MScritt/NLettoriMScrittoriFavorireScrittori.c">NLettoriMScrittoriFavorireScrittori.c</A>
+Codice Readers & Writers  Favorire Scrittori
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/NLett_MScritt/MakefileFavorireScrittori">MakefileFavorireScrittori</A>
+Makefile per Lettori Scrittori ma favorire gli scrittori
+<BR>
+
+
+<!--
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>AGGIUNTA </B> 4 Filosofi bastardi contro 1
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "./5cAGGIUNTA_4FilosofiBastardiContro1.pdf">5cAGGIUNTA_4FilosofiBastardiContro1.pdf</A>
+-->
+
+<BR>
+<BR>
+
+<!--
+&nbsp;&nbsp; <A HREF = "./5d_EserciziConcorrenza.pdf"> 5d_EserciziConcorrenza.pdf </A> (Esercizi per casa) <BR>
+<BR>
+
+&nbsp;&nbsp; <A HREF = "./5f_EserciziConcorrenzaEVari.pdf"> 5f_EserciziConcorrenzaEVari.pdf </A> Esercizi in laboratorio e per casa <BR>
+&nbsp;&nbsp; &nbsp;&nbsp; <A HREF = "./PTHREAD/FORNAIO_FIFO/simple_fornaioFIFO.c"> simple.c </A> soluzione semplice esercizio 1 del blocco 5f <BR>
+&nbsp;&nbsp; &nbsp;&nbsp; <A HREF = "./PTHREAD/FORNAIO_FIFO/fornaioFIFO.c"> efficiente.c </A> soluzione pi&ugrave; efficiente esercizio 1 del blocco 5f <BR>
+&nbsp;&nbsp; &nbsp;&nbsp; <A HREF = "./PTHREAD/FORNAIO_FIFO/Makefile"> Makefile </A> Makefile per entrambe le soluzioni<BR>
+<BR>
+-->
+
+
+</BODY>
+</HTML>
+

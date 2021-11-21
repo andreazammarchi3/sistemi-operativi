@@ -1,0 +1,17 @@
+# questo Makefile serve a dimostrare che il make
+# lancia ciascun comando della lista di comandi
+# stando sempre nella directory corrente,
+# anche se i comandi cambiano directory
+# anche se i comandi provocano errori
+#
+# lanciare cosi':   make -s -f Makefile_checkdir
+# il -s serve per non far stampare a video i comandi da eseguire
+
+
+# SHELL=/bin/bash
+
+all:
+	echo "inizio caso 1"; pwd ; echo "cambio directory" ; cd / ; pwd ; echo "fine caso 1" ;
+	echo "inizio caso 2"; pwd ; echo "fine caso 2" ;
+
+

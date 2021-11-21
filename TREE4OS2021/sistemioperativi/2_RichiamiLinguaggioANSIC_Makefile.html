@@ -1,0 +1,192 @@
+
+<HEAD> <TITLE>  Dispense di SISTEMI OPERATIVI </TITLE> </HEAD>
+<!--
+<BODY TEXT="#000000" BGCOLOR="#F9E1A4" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+<BODY TEXT="#000000" BGCOLOR="#F0B0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+-->
+
+<H3><I><B>2. Richiami di Linguaggio ANSI C, Macro, Moduli, Makefile.</B></I></H3>
+Preprocessore, compilatore, assemblatore e linker, define e macro,<BR>
+programmi costituiti da pi&ugrave moduli, dichiarazioni extern e static, <BR>
+Makefile, librerie statiche e dinamiche,<BR> 
+<BR>
+
+&nbsp;&nbsp;  <B>Compilazione e Moduli </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href ="ANSI_C_CompilazioneModuliVariabili.pdf">
+ANSI_C_CompilazioneModuliVariabili.pdf C</a> 
+(Appunti delle lezioni) <BR>
+
+<!--
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+ Solo per chi volesse rinfrescarsi la memoria 
+&nbsp;&nbsp; <a href ="../archcomp/ANSI_C_perSistemiOperativi.html#Dispense">Dispense Linguaggio ANSI C</a> <BR>
+-->
+
+&nbsp;&nbsp;  <B>Opzioni del gcc e uso del Makefile</B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "2c_gcc_Makefile.pdf"> 2c_gcc_Makefile.pdf </A> (Appunti delle lezioni) <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "MAKEFILE_ESEMPINOTEVOLI/simplemake.tgz">simplemake.tgz</A>
+<BR>
+&nbsp;&nbsp; <B> Cenni su Librerie Statiche e Caricate Dinamicamente </B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "2b_Librerie_Statiche_Dinamiche_TEMP.pdf"> 2b_Librerie_Statiche_Dinamiche_TEMP.pdf </A> (Appunti delle lezioni) <BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Costruire librerie caricabili dinamicamente: esempio</B><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <A HREF = "2e_Esempio_Librerie_Dinamiche.pdf">2e_Esempio_Librerie_Dinamiche.pdf</A>,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <A HREF = "LIBRERIE_ANNIDATE/Makefile">Makefile</A>,
+        <A HREF = "LIBRERIE_ANNIDATE/progr1.c">progr1.c</A>,
+        <A HREF = "LIBRERIE_ANNIDATE/funzioni1.c">funzioni1.c</A>,
+        <A HREF = "LIBRERIE_ANNIDATE/funzioni1.h">funzioni1.h</A>,
+        <A HREF = "LIBRERIE_ANNIDATE/funzioni2.c">funzioni2.c</A>,
+        <A HREF = "LIBRERIE_ANNIDATE/funzioni2.h">funzioni2.h</A>
+	<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+<B>Comandi per visualizzazione librerie presenti in memoria:</B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <A HREF = "LIBRERIE_ANNIDATE/VISUALIZZA_LIBRERIE_IN_MEMORIA.sh">VISUALIZZA_LIBRERIE_IN_MEMORIA.sh</A>
+<BR>
+
+<!--
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Per chi volesse approfondire con semplicit&aacute;:</B><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <A HREF = "https://www.it-swarm.net/it/c%2B%2B/opzione-gcc-fpic/971473043/">
+		fPIC PIC PLT GOT</A><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <A HREF = "https://github.com/STB1019/SkullOfSummer/wiki/Static-e-dynamic-linking:-static-&&-shared-libraries">
+		BELLO - Librerie statiche e dinamiche</A><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <A HREF = "http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html">
+		BELLO - Shared Libraries</A><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <A HREF = "http://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/">
+		PIC - Position Independent Code</A><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <A HREF = "http://eli.thegreenplace.net/2011/08/25/load-time-relocation-of-shared-libraries/">
+		Load Time Relocation</A><BR>
+        <A HREF = "https://www.agner.org/optimize/optimizing_cpp.pdf">
+		Per -fPIC: Optimizing software in C++</A>by Agner Fog<BR>
+-->
+
+<BR>
+&nbsp;&nbsp; <B> Esercitazioni in laboratorio </B> (lezioni 6,7) <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; <A HREF = "2d_laboratorio_C_Makefile_utils.pdf"> 2d_laboratorio_C_Makefile_utils.pdf </A>
+
+<H4><B> --- Esempi utili --- </B></H4>
+
+&nbsp;&nbsp;  <B> Esempio con piu' moduli </B> - Oracolo: </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "Oracolo_EsempioPiuModuli/Makefile">Makefile</A>,
+        <A HREF = "Oracolo_EsempioPiuModuli/oracolo.c">oracolo.c</A>,
+        <A HREF = "Oracolo_EsempioPiuModuli/interroga.c">interroga.c</A>,
+        <A HREF = "Oracolo_EsempioPiuModuli/interroga.h">interroga.h</A>
+<BR>
+<BR>
+&nbsp;&nbsp;  <B>Errore Bastardo #1 </B> - Perch&eacute; mettere SEMPRE i prototipi di funzioni e anche l'opzione -Wall  :
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "PrototipiFunzioni_PercheSI/Makefile">Makefile</A>,
+        <A HREF = "PrototipiFunzioni_PercheSI/mainConErrore.c">main.c</A>,
+        <A HREF = "PrototipiFunzioni_PercheSI/funzioni.c">funzioni.c</A>
+<BR>
+<BR>
+&nbsp;&nbsp;  <B>Errore Bastardo #2 </B> - Non modificare Stringhe Costanti perch&eacute; stanno in segmenti read only  :
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "StringheCostanti/stringhe_costanti.c">stringhe_costanti.c</A>,
+        <A HREF = "StringheCostanti/stringhe_costanti.s">stringhe_costanti.s</A>(vedere sezione <B>rodata</B>), 
+        <A HREF = "StringheCostanti/Makefile">Makefile</A>,
+<BR>
+<BR>
+&nbsp;&nbsp;  <B>Esempio programma con pi&ugrave; moduli e pi&ugrave; variabili Globali</B>: come proteggere le variabili globali
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <A HREF = "VarGlobaliExtern/main.c">main.c</A> &nbsp;&nbsp;&nbsp;
+      <A HREF = "VarGlobaliExtern/funzioni.c">funzioni.c</A> &nbsp;&nbsp;&nbsp;
+      <A HREF = "VarGlobaliExtern/funzioni2.c">funzioni2.c</A> &nbsp;&nbsp;&nbsp;
+      <A HREF = "VarGlobaliExtern/Makefile">Makefile</A> &nbsp;&nbsp;&nbsp;
+<BR>
+<BR>
+&nbsp;&nbsp;  <B>Esempi compilazione condizionale</B> :
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <A HREF = "PREPROCESSORE/ifdef.c">ifdef.c</A> &nbsp;&nbsp;&nbsp;
+      <A HREF = "PREPROCESSORE/ifdef_con_espressioni_intere.c">ifdef_con_espressioni_intere.c</A> &nbsp;&nbsp;&nbsp;
+      <A HREF = "PREPROCESSORE/ifndef.c">ifndef.c</A> &nbsp;&nbsp;&nbsp;
+<BR>
+&nbsp;&nbsp;  <B>Esempio Macro #1 - Macro con corpo in pi&ugrave; righe</B> :
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "MACRO/macro_in_piu_righe.c">macro_in_piu_righe.c</A> &nbsp;
+        (diventa <A HREF = "MACRO/macro_in_piu_righe.E">macro_in_piu_righe.E</A>) 
+<BR>
+&nbsp;&nbsp;  <B>Esempio Macro con Argomenti #2 </B> - Perch&eacute; incapsulare il corpo della macro in un <B><I>do while(0)</I></B> :
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Chiamata semplice di Macro <A HREF = "MACRO/macro_chiamata_isolata.c">macro_chiamata_isolata.c</A> &nbsp;
+        (diventa <A HREF = "MACRO/macro_chiamata_isolata.E">macro_chiamata_isolata.E</A>)
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Problema: Chiamata di Macro in un if <A HREF = "MACRO/macro_chiamata_in_if.c">macro_chiamata_in_if.c</A> &nbsp;
+        (diventa <A HREF = "MACRO/macro_chiamata_in_if.E">macro_chiamata_in_if.E</A>)
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        OK: Chiamata di Macro in un if <A HREF = "MACRO/macroOK_chiamata_in_if.c">macroOK_chiamata_in_if.c</A> &nbsp;
+        (diventa <A HREF = "MACRO/macroOK_chiamata_in_if.E">macroOK_chiamata_in_if.E</A>)
+<BR>
+&nbsp;&nbsp;  <B>Esempio Macro con Argomenti #3 </B> - Perch&eacute; incapsulare gli argomenti tra parentesi tonde</B> :
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Implementazione di macro con e senza parentesi attorno agli argomenti <A HREF = "MACRO/macro_arg_parentesi.c">macro_arg_parentesi.c</A>
+<BR>
+&nbsp;&nbsp;  <B>Esempio Include Annidati e Inclusi pi&ugrave; volte</B> : Perch&eacute; racchiudere il contenuto degli header file dentro una direttiva <B>#ifndef</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "PREPROCESSORE/INCLUDE_ANNIDATI/index.html">INCLUDE_ANNIDATI/</A> &nbsp;
+        (directory da listare) 
+<BR>
+<H4><B>Uso del Makefile</B></H4> 
+
+&nbsp;&nbsp;  <B>Esempio in quale shell il make esegue la lista di comandi? <B>sh</B> non bash</B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; <A HREF = "MAKEFILE_ESEMPINOTEVOLI/MAKEFILE_SPECIFICASHELL/Makefile_check_shellechoesprcond"> Makefile_check_shellechoesprcond </A> <BR>
+&nbsp;&nbsp;  <B>Esempio in quale directory il make lancia ciascuna riga di comandi della lista? <B>current, per ogni riga di comandi</B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; <A HREF = "MAKEFILE_ESEMPINOTEVOLI/MAKEFILE_CHECKDIR/Makefile_checkdir"> Makefile_checkdir </A> <BR>
+&nbsp;&nbsp;  <B>Esempio Non conta l'ordine di definizione della variabili del Make</B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; <A HREF = "MAKEFILE_ESEMPINOTEVOLI/MAKEFILE_ORDINEDEFINIZIONIVARIABILIDELMAKE/Makefile_ordinedefinizionivariabilidelmake">Makefile_ordinedefinizionivariabilidelmake</A> 
+
+<BR>
+
+<BR>
+<H4><B>Approfondimenti non obbligatori</B></H4> 
+
+&nbsp;&nbsp; Convenzione di Chiamata a funzione in ANSI C <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; <A HREF = "2_calling_convention.pdf"> 2_calling_convention.pdf </A> (Appunti delle lezioni) <BR>
+<BR>
+
+
+</BODY>
+</HTML>
+

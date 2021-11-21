@@ -1,0 +1,78 @@
+
+<HEAD> <TITLE>  Dispense di SISTEMI OPERATIVI </TITLE> </HEAD>
+<!--
+<BODY TEXT="#000000" BGCOLOR="#F9E1A4" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+<BODY TEXT="#000000" BGCOLOR="#F0B0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+-->
+
+<H3><I><B>10. Linux e Linux Kernel Modules </B></I></H3>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Cenni su alcuni aspetti caratteristici di GNU Linux</B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <A HREF = "LLL_LinuxBase.pdf">Due Parole Su Linux </A> (Traccia della lezione) <BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Compilazione del Kernel di Linux</B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "Compile&#32;Linux&#32;Kernel&#32;4.2.6&#32;on&#32;Light&#32;Ubuntu&#32;15.04.pdf">Compile Linux Kernel 4.2.6 on Light Ubuntu 15.04.pdf</A> NB: questo file subir&agrave; modifiche, non scaricatelo! <BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Compilazione Moduli Esterni del Kernel Linux </B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "README_CompilareModuliEsterniDelKernelLinux.txt">README_CompilareModuliEsterniDelKernelLinux.txt</A> 
+&nbsp;  Breve introduzione alla compilazione di moduli esterni
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "CompilingLinuxKernelModules.txt">CompilingLinuxKernelModules.txt</A> 
+&nbsp;  Documentazione Ufficiale di www.kernel.org
+<BR>
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B> Esempio minimale di modulo:  hello_module.ko </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "KERNEL_MODULES/hello_kernel_module/hello_module.c">hello_module.c</A> 
+&nbsp;
+<A HREF = "KERNEL_MODULES/hello_kernel_module/Makefile">Makefile</A>
+<BR>
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Esempio di modulo con parametri: parameter_module.ko</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "KERNEL_MODULES/parameter_kernel_module/parameter_module.c">parameter_module.c</A> 
+&nbsp;
+<A HREF = "KERNEL_MODULES/parameter_kernel_module/Makefile">Makefile</A>
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Esempio di modulo che gestisce un buffer fifo in /proc: rw1byteproc.ko</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "KERNEL_MODULES/rw1byteproc_kernel_module/rw1byteproc.c">rw1byteproc.c</A> 
+&nbsp;
+<A HREF = "KERNEL_MODULES/rw1byteproc_kernel_module/Makefile">Makefile</A>
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B>Esempio di modulo che usa socket netlink: using_netlink_module.ko</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "KERNEL_MODULES/using_netlink/using_netlink_kernel_module/using_netlink_module.c">using_netlink_module.c</A> 
+&nbsp;
+<A HREF = "KERNEL_MODULES/using_netlink/using_netlink_kernel_module/Makefile">Makefile</A> Lato Kernel
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "KERNEL_MODULES/using_netlink/using_netlink_userapp/using_netlinl_userapp.c">using_netlinl_userapp.c</A> 
+&nbsp;
+<A HREF = "KERNEL_MODULES/using_netlink/using_netlink_userapp/Makefile">Makefile</A> Lato User Application
+<BR>
+
+
+</BODY>
+</HTML>
+~
+

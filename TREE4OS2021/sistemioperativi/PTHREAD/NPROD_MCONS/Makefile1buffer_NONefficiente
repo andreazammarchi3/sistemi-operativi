@@ -1,0 +1,21 @@
+CFLAGS=-ansi -Wpedantic -Wall -D_REENTRANT -D_THREAD_SAFE -D_POSIX_C_SOURCE=200112L
+
+LIBRARIES=-lpthread
+
+all: 	NProdMCons1buffer_NONefficiente.exe
+
+NProdMCons1buffer_NONefficiente.exe: NProdMCons1buffer_NONefficiente.o DBGpthread.o
+	gcc ${CFLAGS} -o NProdMCons1buffer_NONefficiente.exe NProdMCons1buffer_NONefficiente.o DBGpthread.o ${LIBRARIES}
+
+NProdMCons1buffer_NONefficiente.o: NProdMCons1buffer_NONefficiente.c DBGpthread.h printerror.h
+	gcc ${CFLAGS} -c NProdMCons1buffer_NONefficiente.c
+
+DBGpthread.o: DBGpthread.c printerror.h
+	gcc ${CFLAGS} -c DBGpthread.c
+
+.PHONY:	clean
+
+clean:
+	-rm -f NProdMCons1buffer_NONefficiente.o DBGpthread.o NProdMCons1buffer_NONefficiente.exe
+
+

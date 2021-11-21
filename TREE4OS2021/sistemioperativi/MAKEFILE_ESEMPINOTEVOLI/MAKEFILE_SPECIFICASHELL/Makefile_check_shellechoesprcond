@@ -1,0 +1,27 @@
+# questo Makefile serve a dimostrare che il make
+# per eseguire dei comandi li lancia in una  shell  /bin/sh
+# non in una /bin/bash
+#
+# le due shelll sono un poco diverse, in particolare
+# NELLA  sh
+#   - non esistono le espressioni condizionali con le DOPPIE PARESTESI QUADRE
+#     NON ESISTONO  [[ espr cond  ]]
+#     ma solo le  [ ] 
+#   - il comando builtin echo di sh non ha l'opzione -e che esiste nel comando echo di bash
+#
+# PER ORDINARE AL make di LANCIARE I COMANDI IN UNA /bin/bash  INVECE CHE IN UNA /bin/sh
+# OCCORRE SETTARE NEL MAKEFILE UNA VARIABILE SHELL CON
+# LA shell DA LANCIARE
+# es:
+# SHELL=/bin/bash
+
+# ESEGUIRE make, poi decommentare la linea qui sotto ed eseguire ancora make
+# SHELL=/bin/bash
+
+all:
+	ps
+	echo -e "ciao \t gatto \n"
+	if [[ -e Makefile ]] ; then echo "esiste Makefile" ; fi
+
+
+

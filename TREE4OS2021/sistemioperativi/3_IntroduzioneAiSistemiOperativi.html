@@ -1,0 +1,125 @@
+
+<HTML>
+
+<HEAD> <TITLE>  INTRODUZIONE AI SISTEMI OPERATIVI </TITLE> </HEAD>
+<!--
+<BODY TEXT="#000000" BGCOLOR="#F9E1A4" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+<BODY TEXT="#000000" BGCOLOR="#F0B0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+-->
+
+<H3><I><B>3. Introduzione ai Sistemi Operativi.</B></I></H3>
+&nbsp;&nbsp; <B> Riferimento: </B> Capitolo 1 "Introduzione" del libro di testo. <BR>
+<BR>
+
+&nbsp;&nbsp; <B> Introduzione ai sistemi operativi </B> <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp; <A HREF = "3_introSistemaOperativo.pdf"> 3_introSistemaOperativo.pdf </A> (Traccia delle lezioni) <BR>
+<BR>
+
+
+<H4>
+<B> Chiamata di Interrupt software  e di system call </B> 
+</H4>
+
+<H5>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B> Premessa: Formato ELF dell'eseguibile, Entry Point Address, Problema del Linking</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "EntryPoint_Linking.pdf">EntryPoint_Linking.pdf</A>
+<BR>
+</H5>
+
+<H5>
+&nbsp;&nbsp;  <B> Esempi di chiamata di Interrupt software in assembly per x86-64 (ma a 32 bit) </B> - print ed exit 
+<BR>
+<BR>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B> Usando 'as' e 'ld' direttamente senza 'gcc', con inizio codice in '_start' </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "INTERRUPT_SOFTWARE/Makefile_ld">Makefile_ld</A>
+	&nbsp;&nbsp; 
+        <A HREF = "INTERRUPT_SOFTWARE/print.s">print.s</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B> Usando 'gcc' escludendo le librerie standard, con inizio codice in '_start'</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "INTERRUPT_SOFTWARE/Makefile_gcc-nostdlib">Makefile_gcc-nostdlib</A>
+	&nbsp;&nbsp; 
+        <A HREF = "INTERRUPT_SOFTWARE/print.s">print.s</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B> Usando 'gcc' e le librerie standard, con inizio codice in 'main'</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "INTERRUPT_SOFTWARE/Makefile_usa_main">Makefile_usa_main</A>
+	&nbsp;&nbsp; 
+        <A HREF = "INTERRUPT_SOFTWARE/print_usa_main.s">print_usa_main.s</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B> Usando 'gcc' e le librerie standard, con inizio codice in 'main',<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+anche chiamando da assembly le funzioni di libreria C </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "INTERRUPT_SOFTWARE/Makefile_usa_printf">Makefile_usa_printf</A>
+	&nbsp;&nbsp; 
+        <A HREF = "INTERRUPT_SOFTWARE/print_usa_printf.s">print_usa_printf.s</A>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Notare che per usare printf NON POSSO ESCLUDERE le librerie standard C<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cio&eacute; non posso usare il flag di linking -nostdlib<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Verificare che il linking fallisce usando il flag -nostdlib<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "INTERRUPT_SOFTWARE/Makefile_Errore_usa_printf_gcc-nostdlib">Makefile_Errore_usa_printf_gcc-nostdlib</A>
+<BR>
+<BR>
+<BR>
+
+
+&nbsp;&nbsp;  <B>Chiamata di system call in assembly a 64 bit per x86-64 (64 bit) </B> - print ed exit 
+<BR>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Premessa: <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+L'istruzione '<B>int 0x80<\B>' ha dei limiti in ambiente a 64 bit.<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Occorre <B>sostituirla<\B> con l'istruzione <B>syscall<\B>.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "Sostituire_int_0x80_con_syscall___in_architetture_a_64_bit.pdf">Sostituire_int_0x80_con_syscall___in_architetture_a_64_bit.pdf</A>
+<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<B> Chiamare syscall usando 'gcc' e librerie standard, con inizio codice in 'main'</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+anche chiamando da assembly le funzioni di libreria C </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <A HREF = "INTERRUPT_SOFTWARE/Makefile64_usa_printf">Makefile64_usa_printf</A>
+	&nbsp;&nbsp; 
+        <A HREF = "INTERRUPT_SOFTWARE/print64_usa_printf.s">print64_usa_printf.s</A>
+<BR>
+</H5>
+
+</BODY>
+</HTML>
+
+

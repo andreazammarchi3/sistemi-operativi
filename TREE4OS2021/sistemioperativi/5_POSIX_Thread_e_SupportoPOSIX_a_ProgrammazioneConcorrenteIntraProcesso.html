@@ -1,0 +1,150 @@
+
+<HEAD> <TITLE>  POSIX Thread e Supporto POSIX alla Programmazione Concorrente intra-Processo </TITLE> </HEAD>
+<!--
+<BODY TEXT="#000000" BGCOLOR="#F9E1A4" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+<BODY TEXT="#000000" BGCOLOR="#F0B0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="HTML/back.gif">
+-->
+
+<H3><I><B>5. Supporto POSIX alla Programmazione Concorrente intra processo - POSIX Thread </B></I></H3>
+
+&nbsp;&nbsp; Argomenti: thread, POSIX thread, concorrenza, mutua esclusione, sincronizzazione,
+mutex, condition variable <BR>
+
+&nbsp;&nbsp; Riferimenti: Capitolo 4 "Thread" e 5 "Sincronizzazione di Processi" del libro di testo.<BR>
+<BR>
+
+&nbsp;&nbsp; <B>Introduzione all'uso di POSIX Threads </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+LEZIONI: <A HREF = "5_Introduzione_All_Uso_di_POSIX_Thread.pdf"> 5_Introduzione_All_Uso_di_POSIX_Thread.pdf </A> Introduzione ai POSIX Thread (Dispense delle lezioni) <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LABORATORIO <A HREF = "5bisA_laboratorio_ProgrammazioneConcorrenteInC_PosixThread.pdf"> 5bisA_laboratorio_ProgrammazioneConcorrenteInC_PosixThread.pdf </A> (laboratorio, lezione 8 ) <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LABORATORIO <A HREF = "5bisB_laboratorio_ProgrammazioneConcorrenteInC_PosixThread.pdf"> 5bisB_laboratorio_ProgrammazioneConcorrenteInC_PosixThread.pdf </A> (laboratorio, lezione 9 ) <BR>
+<BR>
+
+
+<DL>
+<DT>
+&nbsp;&nbsp; <B> A) ESEMPI di FLUSSI DI ESECUZIONE PARALLELI ALL'INTERNO DI UN PROCESSO: Posix Thread, Accesso in Mutua esclusione </B> <BR>
+<BR>
+</DT>
+<DD>
+
+&nbsp;&nbsp; <B>Passaggio di parametri al pthread</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<A HREF = "PTHREAD/BANALEGIUSTO/banale_giusto.c">banale_giusto.c</A>
+<A HREF = "PTHREAD/BANALEGIUSTO/Makefile">Makefile</A>
+modo corretto di passare parametri ai pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/CON_TRUCCO/con_trucco.c">con_trucco.c</A>
+<A HREF = "PTHREAD/CON_TRUCCO/Makefile">Makefile</A>
+trucco osceno per passare parametri <B>interi</B> ai pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/BANALIERRATI/banale_errato.c">banale_errato.c</A>
+<A HREF = "PTHREAD/BANALIERRATI/banale_moltoerrato.c">banale_moltoerrato.c</A>(MODIFICATO)&nbsp;&nbsp;
+<A HREF = "PTHREAD/BANALIERRATI/Makefile">Makefile</A>
+due modi sbagliati di passare parametri ai pthread
+<BR>
+<BR>
+&nbsp;&nbsp; <B>Sincronizzazione [o no] con la fine di un pthread</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/JOIN_DETACHED/joinable.c">joinable.c</A>
+restituzione di risultato da un pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/JOIN_DETACHED/detached.c">detached.c</A>
+non restituzione di risultato da pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/JOIN_DETACHED/cancel.c">cancel.c</A>
+eliminazione di un pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/JOIN_DETACHED/Makefile">Makefile</A>
+Makefile per i tre esempi joinable detached cancel
+<BR>
+<BR>
+
+&nbsp;&nbsp; <B>NB: Assegnamenti NON SONO atomici (non sempre) </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/VIOLAZIONE_MUTUA_ESCLUSIONE/verifica_assegnamenti_contemporanei_long_double.c">verifica_assegnamenti_contemporanei_long_double.c</A>
+esempio di scritture che si sovrappongono su long double
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/VIOLAZIONE_MUTUA_ESCLUSIONE/Makefile">Makefile</A>
+il Makefile per compilare l'esempio 
+<BR>
+<BR>
+</DD>
+
+<DT>
+&nbsp;&nbsp; <B> B) ESEMPI DI USO DI STRUTTURE E FUNZIONI POSIX PER PROGRAMMAZIONE CONCORRENTE: Mutexes e Condition Variables </B>
+<BR>
+</DT>
+<DD>
+<BR>
+&nbsp;&nbsp; <B>Mutua Esclusione di pthread in sezioni critiche con Mutexes (Binary Semaphores) </B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/MUTEX_CONDVAR/mutex.c">mutex.c</A>
+esempio di protezione in mutua esclusione tra pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/MUTEX_CONDVAR/printerror.h">printerror.h</A>
+un file di macro per stampare informazioni sugli errori
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/MUTEX_CONDVAR/Makefile">Makefile</A>
+il Makefile per compilare l'esempio mutex e i due successivi CondVar*
+<BR>
+<BR>
+&nbsp;&nbsp; <B>Sincronizzazione di pthread con Mutexes e Condition Variables</B>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+esempio NON EFFICENTE di Sincronizzazione (PROVOCA BUSY WAITING)
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/GALLINA_UOVA_VOLPE/busywaiting_gallinauovavolpe.c">busywaiting_gallinauovavolpe.c</A>&nbsp;
+<A HREF = "PTHREAD/GALLINA_UOVA_VOLPE/printerror.h">printerror.h</A>&nbsp;
+<A HREF = "PTHREAD/GALLINA_UOVA_VOLPE/busywaiting_Makefile">busywaiting_Makefile</A>&nbsp;
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+esempio CORRETTO di Sincronizzazione e Mutua Esclusione tra pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/GALLINA_UOVA_VOLPE/gallinauovavolpe.c">gallinauovavolpe.c</A>&nbsp;
+<A HREF = "PTHREAD/GALLINA_UOVA_VOLPE/printerror.h">printerror.h</A>&nbsp;
+<A HREF = "PTHREAD/GALLINA_UOVA_VOLPE/Makefile">Makefile</A>&nbsp;
+<BR>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/MUTEX_CONDVAR/CondVarBroadcast.c">CondVarBroadcast.c</A>
+esempio #1 di Sincronizzazione e Mutua Esclusione tra pthread
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/MUTEX_CONDVAR/CondVarSignal.c">CondVarSignal.c</A>
+esempio #2 di Sincronizzazione e Mutua Esclusione tra pthread 
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/MUTEX_CONDVAR/printerror.h">printerror.h</A>
+un file di macro per stampare informazioni sugli errori
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF = "PTHREAD/MUTEX_CONDVAR/Makefile">Makefile</A>
+il Makefile per compilare  due esempi CondVar* e il precedente mutex
+<BR>
+</DD>
+</DL>
+
+</BODY>
+</HTML>
+

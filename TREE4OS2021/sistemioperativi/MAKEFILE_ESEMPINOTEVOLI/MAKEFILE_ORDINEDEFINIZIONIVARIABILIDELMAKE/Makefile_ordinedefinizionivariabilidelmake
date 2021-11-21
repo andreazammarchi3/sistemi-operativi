@@ -1,0 +1,20 @@
+# NOTARE CHE definisco VAR0 che contiene VAR3 
+# PRIMA di definire VAR3
+# e che definisco VAR3 che contiene VAR2 
+# PRIMA di definire VAR2
+# NONOSTANTE QUESTO quando stampo VAR0 lo vedo completo
+# in output vedo  var1_var2
+
+VAR1=var1
+VAR0=${VAR3}
+VAR3=${VAR1}_${VAR2}
+VAR2=var2
+
+all:      
+	echo  ${VAR0}
+
+# eseguire make -s -f Makefile_ordinedefinizionivariabilidelmake
+# per non far vedere i comandi lanciati
+# ma solo l'output dei comandi
+
+
